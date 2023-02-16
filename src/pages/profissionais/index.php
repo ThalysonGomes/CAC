@@ -54,6 +54,10 @@
 					<input type="text" id="nomeprof" class="form-control" placeholder="NOME">
 				</div>
 				<div class="form-group">
+					<label>Telefone</label>
+					<input type="text" id="telefone" class="form-control" placeholder="TELEFONE">
+				</div>
+				<div class="form-group">
 					<label>Função</label>
 					<select class="form-control" id="funcao">
 						<?php 
@@ -67,7 +71,9 @@
 					</select>
 				</div>
 			</div>
-			<div class="modal-footer"><button id="closemodal2" class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancelar</button><button class="btn btn-primary" type="button">Salvar</button></div>
+			<div class="modal-footer"><button id="closemodal2" class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancelar</button>
+				<button class="btn btn-primary" onclick="salvarprofissional()" type="button">Salvar</button>
+			</div>
 		</div>
 	</div>
 </div>
