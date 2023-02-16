@@ -17,6 +17,7 @@
 						<th>Profissional</th>
 						<th>Função</th>
 						<th></th>
+						<th></th>
 					</thead>
 					<tbody>
 						<?php
@@ -24,7 +25,7 @@
 						require '../../db/Read.class.php';
 						$Tabela = "profissionais, funcoes, profissionais_funcoes";
 						$Colunas = "profissionais.id, profissionais.nome as nomeprof, funcoes.nome as nomefunc";
-						$Where = "Where profissionais_funcoes.id_prof = profissionais.id and profissionais_funcoes.id_func = funcoes.id";
+						$Where = "Where profissionais_funcoes.id_prof = profissionais.id and profissionais_funcoes.id_func = funcoes.id and profissionais.ativo = true";
 						$Read = new Read;
 						$Read->SetRead($Tabela, $Colunas, $Where);
 						foreach($Read->getResultado() as $key){
@@ -32,6 +33,7 @@
 							echo "<td>{$key['nomeprof']}</td>";
 							echo "<td>{$key['nomefunc']}</td>";
 							echo "<td onclick='editprof(\"{$key['id']}\")'><span style='cursor:pointer;' class='fa fa-cog'></span><td>";
+							echo "<td class='text-danger' onclick='excluiprof(\"{$key['id']}\")'><span style='cursor:pointer;' class='fa fa-trash'></span><td>";
 							echo "</tr>";
 						}
 						?>
