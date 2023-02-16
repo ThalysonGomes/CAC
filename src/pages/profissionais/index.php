@@ -11,7 +11,7 @@
 				</div>
 			</div>
 			<!-- Card Body -->
-			<div class="card-body" style="display: block;height: 460px;">
+			<div class="card-body" style="display: block;height: 460px;overflow: auto;">
 				<table class="table table-striped">
 					<thead>
 						<th>Profissional</th>

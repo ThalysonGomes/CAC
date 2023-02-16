@@ -15,7 +15,7 @@ date_default_timezone_set('America/Sao_Paulo');
 	            </div>
 	        </div>
 	        <!-- Card Body -->
-	        <div class="card-body" style="display: block;height: 460px;">
+	        <div class="card-body" style="display: block;height: 460px;overflow: auto;">
 	            <div>
 	            	<h3>
 	            		<?= strftime('%d de %B de %Y', strtotime('today')); ?>
