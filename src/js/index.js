@@ -2,4 +2,10 @@ $(function(){
 	$('#agenda').click(function(){
 		$('.container-fluid').load("src/pages/agenda/index.php")
 	})
+	$('#servicos').click(function(){
+		$('.container-fluid').load("src/pages/servicos/index.php")
+	})
+	$('#profissionais').click(function(){
+		$('.container-fluid').load("src/pages/profissionais/index.php")
+	})
 });

@@ -9,7 +9,7 @@ date_default_timezone_set('America/Sao_Paulo');
 	        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
 	            <h6 class="m-0 font-weight-bold text-primary">Agenda</h6>
 	            <div class="dropdown no-arrow">
-	                <a class="dropdown-toggle" onclick="$('#exampleModal').modal()" href="#">
+	                <a class="dropdown-toggle" onclick="addagenda()" href="#">
 	                    <i class="fa fa-plus text-primary-400"></i>
 	                </a>
 	            </div>
@@ -62,12 +62,12 @@ date_default_timezone_set('America/Sao_Paulo');
 	    </div>
 	</div>
 </div>
-<div class="modal fade" id="exampleModal" tabindex="-1">
+<div class="modal fade bd-example-modal-lg" id="modalagenda" tabindex="-1">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Adicionar Cliente</h5>
-                <button class="btn btn-close" onclick="$('#exampleModal').modal('toggle')" type="button" data-bs-dismiss="modal" aria-label="Close"><i class="fa fa-close "></i></button>
+                <h5 class="modal-title" id="modalagendaLabel">Adicionar Cliente</h5>
+                <button class="btn btn-close" id="closemodal" type="button" data-bs-dismiss="modal" aria-label="Close"><i class="fa fa-close "></i></button>
             </div>
             <div class="modal-body">
             	<div class="form-group">
@@ -82,10 +82,11 @@ date_default_timezone_set('America/Sao_Paulo');
                     </div>
             	</div>
             </div>
-            <div class="modal-footer"><button onclick="$('#exampleModal').modal('toggle')" class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancelar</button><button class="btn btn-primary" type="button">Salvar</button></div>
+            <div class="modal-footer"><button id="closemodal2" class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancelar</button><button class="btn btn-primary" type="button">Salvar</button></div>
         </div>
     </div>
 </div>
+<script src="src/js/agenda.js"></script>
 <script type="text/javascript">
 	$('#calenday').datepicker();
 </script>
