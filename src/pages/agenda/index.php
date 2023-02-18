@@ -73,13 +73,14 @@ date_default_timezone_set('America/Sao_Paulo');
             	<div class="form-group">
             		<label>Cliente</label>
             		<div class="input-group">
-            		<input type="text" id="cliente" class="form-control">
-            		<div class="input-group-append">
+						<input style="text-transform: uppercase;" onkeyup="buscacliente(this, event)" type="text" id="nomecliente" class="form-control">
+						<div class="input-group-append">
                             <button class="btn btn-primary" type="button">
-                                <i class="fa fa-search"></i>
+                                <i class="fa fa-search fa-sm"></i>
                             </button>
-                        </div>
-                    </div>
+                        </div>                      
+					</div>
+					<div class="dropdown shadow bg-white mb-4" style="position: absolute;width: 88%;z-index: 100;display: none;background-clip: padding-box;border: 1px solid #d1d3e2;border-radius: .35rem;transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;padding: .375rem .75rem;" id="listsearch"></div>
             	</div>
             </div>
             <div class="modal-footer"><button id="closemodal2" class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancelar</button><button class="btn btn-primary" type="button">Salvar</button></div>
@@ -87,6 +88,7 @@ date_default_timezone_set('America/Sao_Paulo');
     </div>
 </div>
 <script src="src/js/agenda.js"></script>
+<script src="src/js/clientes.js"></script>
 <script type="text/javascript">
 	$('#calenday').datepicker();
 </script>
