@@ -47,8 +47,8 @@
 										foreach($Read2->getResultado() as $key2){
 											?>
 											<tr>
-												<td><?= $key['nome'] ?></td>
-												<td><?= $key['valor'] ?></td>
+												<td><?= $key2['nome'] ?></td>
+												<td><?= '--- R'.$key2['valor'] ?></td>
 											</tr>
 											<?php
 										}
@@ -76,7 +76,7 @@
 				<div class="form-group">
 					<label>Nome</label>
 					<input type="text" id="nomeserv" class="form-control">
-					<input type="hidden" id="codserv">
+					<input type="hidden" id="codcateg">
 				</div>
 				<div class="form-group">
 					<label>Valor</label>

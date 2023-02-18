@@ -36,10 +36,10 @@
                 </a>
             </li>
 
-            <li class="nav-item active">
+            <li class="nav-item active" id="comandas">
                 <a class="nav-link" href="#">
                     <i class="fa fa-usd"></i>
-                    <span>Comandas</span>
+                    <span>Financeiro</span>
                 </a>
             </li>
 

@@ -2,14 +2,14 @@ function addservico(id, nome){
 	$('#modalservico').modal();
 	$('#closemodal').click(function(){
 		$('#modalservico').modal('toggle');
-		$('#codserv').val("");
+		$('#codcateg').val("");
 	});
 	$('#closemodal2').click(function(){
 		$('#modalservico').modal('toggle');
-		$('#codserv').val("");
+		$('#codcateg').val("");
 	});
 	$('#nomecateg').html(nome);
-	$('#codserv').val(id);
+	$('#codcateg').val(id);
 }
 
 function addcategoria(){
@@ -24,6 +24,13 @@ function addcategoria(){
 
 function salvarservico(){
 	var nomeserv = $('#nomeserv').val();
-	var codserv = $('#codserv').val();
+	var codcateg = $('#codcateg').val();
 	var valor = $('#valor').val();
+
+	$.post('src/pages/servicos/salvaservico.php', {nomeserv, codcateg, valor}, function(data){
+		alert(data);
+		$('#modalservico').modal('toggle');
+		$('.container-fluid').load("src/pages/servicos/index.php");
+	})
+
 }

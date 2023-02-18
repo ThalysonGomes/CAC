@@ -8,4 +8,7 @@ $(function(){
 	$('#profissionais').click(function(){
 		$('.container-fluid').load("src/pages/profissionais/index.php")
 	})
+	$('#comandas').click(function(){
+		$('.container-fluid').load("src/pages/comandas/index.php")
+	})
 });

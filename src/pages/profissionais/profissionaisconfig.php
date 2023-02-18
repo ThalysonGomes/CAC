@@ -57,8 +57,8 @@ foreach($Read->getResultado() as $key){
 											?>
 											<tr>
 												<td><input type="checkbox" name="addproced" value="<?= $key['id']; ?>"> </td>
-												<td><?= $key['nome'] ?></td>
-												<td><input type="text" class="form-control" id="porcentagemprof"></td>
+												<td width="200"><?= $key2['nome'] ?></td>
+												<td width="50"><input type="text" class="form-control" id="porcentagemprof"></td>
 											</tr>
 											<?php
 										}
