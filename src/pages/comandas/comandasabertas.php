@@ -34,7 +34,7 @@
 				<td><?= $key['nome'] ?></td>
 				<td><?= date('d/m/Y', strtotime($key['datacomanda'])); ?></td>
 				<td><?= 'R$'.$Sum ?></td>
-				<td><i class="fa fa-pencil text-primary" style="cursor: pointer;"></i> <i class="fa fa-trash text-danger" style="cursor: pointer;"></i></td>
+				<td><i class="fa fa-pencil text-primary" onclick="editcomand(<?= $key['id']?>)" style="cursor: pointer;"></i> <i class="fa fa-trash text-danger" onclick="delcomand(<?= $key['id']?>)" style="cursor: pointer;"></i></td>
 			</tr>
 			<?php
 		}
