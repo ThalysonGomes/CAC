@@ -27,13 +27,13 @@
 				$Sum = $Read2->getResultado()[0]['valorcomanda'];
 			}
 			else{
-				$Sum = "0.00";
+				$Sum = "$0.00";
 			}
 			?>
 			<tr>
 				<td><?= $key['nome'] ?></td>
 				<td><?= date('d/m/Y', strtotime($key['datacomanda'])); ?></td>
-				<td><?= 'R$'.$Sum ?></td>
+				<td><?= 'R'.$Sum ?></td>
 				<td><i class="fa fa-pencil text-primary" onclick="editcomand(<?= $key['id']?>)" style="cursor: pointer;"></i> <i class="fa fa-trash text-danger" onclick="delcomand(<?= $key['id']?>)" style="cursor: pointer;"></i></td>
 			</tr>
 			<?php

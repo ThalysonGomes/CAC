@@ -87,8 +87,6 @@ date_default_timezone_set('America/Sao_Paulo');
         </div>
     </div>
 </div>
-<script src="src/js/agenda.js"></script>
-<script src="src/js/clientes.js"></script>
 <script type="text/javascript">
 	$('#calenday').datepicker();
 </script>

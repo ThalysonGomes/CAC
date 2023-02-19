@@ -180,6 +180,11 @@
 <script src="src/lib/sbadmin/js/sb-admin-2.min.js"></script>
 <script src="src/lib/bootstrap/bootstrap.js"></script>
 <script src="src/js/index.js"></script>
+<script src="src/js/comandas.js"></script>
+<script src="src/js/clientes.js"></script>
+<script src="src/js/agenda.js"></script>
+<script src="src/js/profissionais.js"></script>
+<script src="src/js/servicos.js"></script>
 <script type="text/javascript">
     $(function(){
         $('.container-fluid').load("src/pages/agenda/index.php")
