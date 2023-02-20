@@ -6,6 +6,4 @@ $adserv = $_POST['adserv'];
 $prof = $_POST['prof'];
 $valor = $_POST['valor'];
 $comanda = $_POST['comanda'];
-
-
 ?>
