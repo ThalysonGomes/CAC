@@ -108,4 +108,3 @@
 		</div>
 	</div>
 </div>
-<script src="src/js/servicos.js"></script>
