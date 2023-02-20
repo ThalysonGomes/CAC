@@ -103,7 +103,7 @@
 				</div>
 			</div>
 			<div class="modal-footer"><button id="closemodal2" class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancelar</button>
-				<button class="btn btn-primary" onclick="salvarservico()" type="button">Salvar</button>
+				<button class="btn btn-primary" onclick="salvarcategoria()" type="button">Salvar</button>
 			</div>
 		</div>
 	</div>

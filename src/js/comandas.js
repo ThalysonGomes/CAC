@@ -39,3 +39,19 @@ function loadservicoscomanda(comanda){
 		$('#servscoms').html(data)
 	})
 }
+
+function newserv(comanda) {
+	$.post('src/pages/comandas/addservico.php', {comanda}, function(data){
+		$('#newscomands').append(data);
+	})
+}
+
+function salvaradserv(codigo){
+	var adserv = $('#adserv'+codigo).val().split('|')[0];
+	var prof = $('#prof'+codigo).val();
+	var valor = $('#valor'+codigo).val();
+	var comanda = $('#comandaselected').val();
+	$.post("src/pages/comandas/addservicocomanda.php", {adserv, prof, valor, comanda}, function(data){
+		console.log(data);
+	})
+}

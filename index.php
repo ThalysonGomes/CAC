@@ -13,6 +13,7 @@
     <link href="src/lib/sbadmin/css/sb-admin-2.min.css" rel="stylesheet">
     <link href="src/lib/fontawesome/css/font-awesome.css" rel="stylesheet">
     <link href="src/lib/jqueryui/jquery-ui.css" rel="stylesheet">
+    <link href="src/lib/chosen/chosen.css" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -179,6 +180,7 @@
 <script src="src/lib/jqueryui/jquery-ui.js"></script>
 <script src="src/lib/sbadmin/js/sb-admin-2.min.js"></script>
 <script src="src/lib/bootstrap/bootstrap.js"></script>
+<script src="src/lib/chosen/chosen.jquery.js"></script>
 <script src="src/js/index.js"></script>
 <script src="src/js/comandas.js"></script>
 <script src="src/js/clientes.js"></script>
