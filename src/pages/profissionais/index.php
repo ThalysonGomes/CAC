@@ -79,4 +79,3 @@
 		</div>
 	</div>
 </div>
-<script src="src/js/profissionais.js"></script>
