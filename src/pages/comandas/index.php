@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" id="menufin">
 	<div class="col-xl-12 col-lg-12">
 		<div class="card shadow mb-4">
 			<!-- Card Header - Dropdown -->
@@ -29,7 +29,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-3 mb-4">
+					<div class="col-md-3 mb-4" onclick="comandasabertas()">
 						<div class="card border-primary hover h-100 py-2">
 							<div class="card-body" onclick="" style="cursor: pointer;">
 								<div class="row no-gutters" align="center">
@@ -133,9 +133,6 @@
 		</div>
 	</div>
 </div>
-
-<script src="src/js/comandas.js"></script>
-<script src="src/js/clientes.js"></script>
 <script type="text/javascript">
 	$('#datacomanda').datepicker();
 	comandasabertas();
