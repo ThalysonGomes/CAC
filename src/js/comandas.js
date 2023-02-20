@@ -25,11 +25,17 @@ function opencomanda(){
 }
 
 function editcomand(comanda){
-	$.post('src/pages/comandas/editcomanda.php', {comanda}, function(data){
+	$.post('src/pages/comandas/editcomandas.php', {comanda}, function(data){
 		$('#contentcomand').html(data)
 	})
 }
 
 function comandasabertas(){
 	$('#contentcomand').load("src/pages/comandas/comandasabertas.php");
+}
+
+function loadservicoscomanda(comanda){
+	$.post('src/pages/comandas/servicoscomandas.php', {comanda}, function(data){
+		$('#servscoms').html(data)
+	})
 }
