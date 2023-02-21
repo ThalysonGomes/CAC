@@ -11,7 +11,6 @@ $Dados = array(
 	"cliente"=>$client,
 	"datacomanda"=>$datacomanda,
 	"situacao"=>"O",
-	"pago_prof"=>"false"
 );
 $Create->SetCreate($Tabela, $Dados);
 echo $Create->getResultado();

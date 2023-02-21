@@ -37,7 +37,7 @@ foreach ($Read->getResultado() as $key) {
 				<table class="table table-hover" id="servscoms">
 				</table>
 				<div class="offset-xl-11">
-					<button class="btn btn-primary">Receber</button>
+					<button class="btn btn-primary" onclick="pagcomand(<?= $CodComanda ?>)">Receber</button>
 				</div>
 			</div>
 		</div>

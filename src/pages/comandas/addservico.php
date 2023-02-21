@@ -4,7 +4,7 @@ require '../../db/Read.class.php';
 
 $CodRandom = rand(5,100);
 ?>
-<div class="form-group" id="<?= $CodRandom ?>">
+<div class="form-group text-dark" id="<?= $CodRandom ?>">
 	<div class="row">
 		<div class="col-xl-4">
 			<label>Serviço</label>

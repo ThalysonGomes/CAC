@@ -44,7 +44,7 @@ foreach($Read->getResultado() as $key){
 									<input style="cursor: pointer;" onclick="checkall(<?= $key['id']?>)" type="checkbox" id="checkall<?= $key['id']?>">
 								</div>
 								<!-- Card Body -->
-								<div class="card-body" style="display: block;height: 320px;">
+								<div class="card-body" style="display: block;height: 320px;overflow: auto;">
 									<input type="text" id="porcateg<?= $key['id'] ?>" class="form-control" placeholder="Porcentagem">
 									<table>
 										<?php 

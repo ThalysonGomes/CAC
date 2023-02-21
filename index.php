@@ -16,7 +16,7 @@
     <link href="src/lib/chosen/chosen.css" rel="stylesheet">
 </head>
 
-<body id="page-top">
+<body id="page-top" class="text-dark">
     <div id="wrapper">
 
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled" id="accordionSidebar">

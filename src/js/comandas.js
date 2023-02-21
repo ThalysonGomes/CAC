@@ -6,6 +6,7 @@ function addcomanda(){
 	$('#closemodal2').click(function(){
 		$('#modalcomanda').modal('toggle');
 	});
+	$('#nomecliente').val("")
 }
 
 function opencomanda(){
@@ -53,5 +54,52 @@ function salvaradserv(codigo){
 	var comanda = $('#comandaselected').val();
 	$.post("src/pages/comandas/addservicocomanda.php", {adserv, prof, valor, comanda}, function(data){
 		console.log(data);
+		$('#'+codigo).remove();
+		loadservicoscomanda(comanda);
+	});
+}
+
+function pagcomand(comanda){
+	$.post("src/pages/comandas/pagcomand.php", {comanda}, function(data){
+		$('.container-fluid').append(data);
 	})
+}
+
+function addformpag(){
+	$.post("src/pages/comandas/addformpag.php", {ok:'ok'}, function(data){
+		$('#formspag').append(data)
+	});
+}
+
+function pagarcomanda(comanda){
+	for (i = 0; i < $('select[ng="formpag"]').length; i++) {
+		var inps = $('select[ng="formpag"]')[i];
+		if($(inps).val() == 2){
+			var bandeira = $('select[ng="bandeira"]')[i];
+			var parcela = $('select[ng="parcelas"]')[i];
+			var bandeira = $(bandeira).val()
+			var parcela = $(parcela).val()
+		}
+		else if($(inps).val() == 3){
+			var bandeira =$('select[ng="bandeira"]')[i];
+			var bandeira = $(bandeira).val()
+			var parcela = 0;
+		}
+		else{
+			var bandeira = "";
+			var parcela = 0;
+		}
+		var descontopag = $('input[ng="descontopag"]')[i];
+		var valorpag = $('input[ng="valorpag"]')[i];
+		var tppagamento = $(inps).val();
+		var descontopag = $(descontopag).val()
+		var valorpag = $(valorpag).val()
+
+		$.post("src/pages/comandas/pagamento.php",{tppagamento, bandeira, parcela, descontopag, valorpag, comanda}, function(data){
+			$('#modpag').remove()
+			comandasabertas();
+		})
+
+
+	}
 }
