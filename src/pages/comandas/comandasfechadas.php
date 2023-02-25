@@ -13,9 +13,10 @@
 		$Read = new Read;
 		$Tabela = "comandas, clientes";
 		$Colunas = "comandas.id, clientes.nome, comandas.datacomanda";
-		$Where = "Where clientes.id = comandas.cliente and situacao = :situacao";
-		$Valores = "situacao=O";
+		$Where = "Where clientes.id = comandas.cliente and situacao = :situacao order by datacomanda desc";
+		$Valores = "situacao=C";
 		$Read->SetRead($Tabela, $Colunas, $Where, $Valores);
+		$Total = 0;
 		foreach ($Read->getResultado() as $key) {
 			$Read2 = new Read;
 			$Tabela2 = "servicos_comanda";
@@ -23,6 +24,7 @@
 			$Where2 = "Where id_com = :idcom";
 			$Valores2 = "idcom={$key['id']}";
 			$Read2->SetRead($Tabela2, $Colunas2, $Where2, $Valores2);
+			$DataComd = date('d/m/Y', strtotime($key['datacomanda']));
 			if(!is_null($Read2->getResultado()[0]['valorcomanda'])){
 				$Sum = $Read2->getResultado()[0]['valorcomanda'];
 			}
@@ -32,9 +34,20 @@
 			?>
 			<tr>
 				<td><?= $key['nome'] ?></td>
-				<td><?= date('d/m/Y', strtotime($key['datacomanda'])); ?></td>
+				<td><?= $DataComd; ?></td>
 				<td><?= 'R'.$Sum ?></td>
-				<td><i class="fa fa-pencil text-primary" onclick="editcomand(<?= $key['id']?>)" style="cursor: pointer;"></i> <i class="fa fa-trash text-danger" onclick="exccomand(<?= $key['id']?>)" style="cursor: pointer;"></i> <i onclick="pagcomand(<?= $key['id'] ?>)" class="fa fa-usd text-success" style="cursor: pointer;"></i></td>
+				<?php 
+				if(date('d/m/Y') == $DataComd){
+					?>
+					<td><i onclick="exccomand(<?= $key['id'] ?>)" class="fa fa-trash text-danger" style="cursor: pointer;"></i></td>
+					<?php 
+				}
+				else{
+					?>
+					<td></td>
+					<?php
+				}
+				?>
 			</tr>
 			<?php
 		}

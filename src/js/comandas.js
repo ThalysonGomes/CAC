@@ -35,6 +35,10 @@ function comandasabertas(){
 	$('#contentcomand').load("src/pages/comandas/comandasabertas.php");
 }
 
+function comandasfechadas(){
+	$('#contentcomand').load("src/pages/comandas/comandasfechadas.php");
+}
+
 function loadservicoscomanda(comanda){
 	$.post('src/pages/comandas/servicoscomandas.php', {comanda}, function(data){
 		$('#servscoms').html(data)
@@ -102,4 +106,11 @@ function pagarcomanda(comanda){
 
 
 	}
+}
+
+function exccomand(id){
+	$.post("src/pages/comandas/delcomandas.php", {id}, function(data){
+		alert(data);
+		comandasfechadas();
+	})
 }
