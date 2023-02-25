@@ -63,7 +63,7 @@
 					</div>
 					<div class="col-md-3 mb-4">
 						<div class="card border-primary hover h-100 py-2">
-							<div class="card-body" onclick="" style="cursor: pointer;">
+							<div class="card-body" onclick="comissoespendentes()" style="cursor: pointer;">
 								<div class="row no-gutters" align="center">
 									<div class="col mr-2">
 										<div class="text-xs font-weight-bold text-primary text-uppercase mb-1">

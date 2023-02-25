@@ -188,6 +188,7 @@
 <script src="src/js/profissionais.js"></script>
 <script src="src/js/servicos.js"></script>
 <script src="src/js/caixa.js"></script>
+<script src="src/js/comissoes.js"></script>
 <script type="text/javascript">
     $(function(){
         $('.container-fluid').load("src/pages/agenda/index.php")

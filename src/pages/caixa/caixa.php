@@ -86,8 +86,8 @@
 			$Read2 = new Read;
 			$Tabela2 = "caixa";
 			$Colunas2 = "SUM(valorpago) as valortotal";
-			$Where2 = "Where datapagamento = :datapag";
-			$Valores2 = "datapag={$Data}";
+			$Where2 = "Where datapagamento = :datapag and tppagamento <> :pen";
+			$Valores2 = "datapag={$Data}&pen=5";
 			$Read2->SetRead($Tabela2, $Colunas2, $Where2, $Valores2);
 			if($Read2->getResultado()[0]['valortotal'] == 0){
 				$ValorTotal = "$0.00";
