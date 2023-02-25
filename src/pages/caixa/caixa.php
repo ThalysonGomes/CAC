@@ -7,7 +7,7 @@
 			<?php 
 			require '../../db/Conn.class.php';
 			require '../../db/Read.class.php';
-			if($_POST['data']){
+			if(!empty($_POST['data'])){
 				$Data = $_POST['data'];
 			}
 			else{
@@ -16,7 +16,7 @@
 			$Read = new Read;
 			$Tabela = "tipopagamento";
 			$Colunas = "id, nome";
-			$Read->SetRead($Tabela, $Colunas, $Where, $Valores);
+			$Read->SetRead($Tabela, $Colunas);
 			foreach($Read->getResultado() as $key){
 				if($key['id'] == 2 or $key['id'] == 3){
 					?>
