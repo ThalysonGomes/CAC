@@ -111,6 +111,12 @@ function pagarcomanda(comanda){
 function exccomand(id){
 	$.post("src/pages/comandas/delcomandas.php", {id}, function(data){
 		alert(data);
-		comandasfechadas();
+	})
+}
+
+function delservico(id, t){
+	$.post("src/pages/comandas/delservicocomanda.php", {id}, function(data) {
+		console.log(data);
+		$(t).parent('tr').remove();
 	})
 }

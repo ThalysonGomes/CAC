@@ -36,6 +36,8 @@ function salvapagamantoprof(prof){
 			var valor = $(inps).val();
 			$.post('src/pages/comissoes/fechacomissoesprof.php', {prof, servicocomanda, valor}, function(data){
 				console.log(data);
+				$('#modcomprof').remove();
+				comissoespendentes();
 			})
 		}
 	}

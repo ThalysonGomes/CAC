@@ -36,7 +36,7 @@
 														<tr>
 								<td><?= $key['nomecliente'] ?></td>
 								<td><?= $key['nomeservico'] ?></td>
-								<td><?= $key['valorpagamento'] . ($key['tppagamento'] == 5 ? " <small>(PENDENTE)</small>" : "")  ?></td>
+								<td><?= 'R'.$key['valorpagamento'] . ($key['tppagamento'] == 5 ? " <small>(PENDENTE)</small>" : "")  ?></td>
 								<td><input onclick="loadvalorestot()" value="<?php  echo explode("$", $key['valorpagamento'])[1] ?>" type="checkbox" name="ckservprof" id="<?= $key['id'] ?>"></td>
 							</tr>
 							<?php
